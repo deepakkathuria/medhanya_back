@@ -14,7 +14,8 @@ app.use(cors()); // Enable CORS for all routes
 
 // API endpoint to handle sending emails
 app.post('/send-email', (req, res) => {
-  const { name, email, mobile } = req.body;
+  const { name, email, phone,message } = req.body;
+  console.log(req.body,"requestbody")
 
   // Replace the following with your actual email configuration
   const transporter = nodemailer.createTransport({
@@ -31,7 +32,9 @@ app.post('/send-email', (req, res) => {
     subject: 'Requested User Detail',
     html: `<p>Username:  ${name},</p>
            <p>UserEmail:  ${email}</p>
-           <p>UserMobile:  ${mobile}</p>
+           <p>UserMobile:  ${phone}</p>
+           <p>Message:  ${message}</p>
+
       `,
   };
 
