@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const cors = require('cors'); // Import the cors module
+
 
 const app = express();
 const port = 8000; // Change this to your desired port number
