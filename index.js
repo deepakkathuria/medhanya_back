@@ -7,6 +7,8 @@ const port = 8000; // Change this to your desired port number
 
 // Middleware to parse incoming request data as JSON
 app.use(bodyParser.json());
+app.use(cors()); // Enable CORS for all routes
+
 
 // API endpoint to handle sending emails
 app.post('/send-email', (req, res) => {
