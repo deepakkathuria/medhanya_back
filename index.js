@@ -28,7 +28,7 @@ app.post('/send-email', (req, res) => {
 
   const mailOptions = {
     from: 'medhanya.entp@gmail.com',
-    to: 'info@medhanya.com',
+    to: ['ashish09srivastava@gmail.com', 'info@medhanya.com'], // Array of recipients
     subject: 'Requested User Detail',
     html: `<p>Username:  ${name},</p>
            <p>UserEmail:  ${email}</p>
